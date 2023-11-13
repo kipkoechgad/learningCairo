@@ -1,0 +1,45 @@
+type felt252 = felt252 [storable: true, drop: true, dup: true, zero_sized: false];
+type Array<felt252> = Array<felt252> [storable: true, drop: true, dup: false, zero_sized: false];
+type Unit = Struct<ut@Tuple> [storable: true, drop: true, dup: true, zero_sized: true];
+
+libfunc felt252_const<4> = felt252_const<4>;
+libfunc store_temp<felt252> = store_temp<felt252>;
+libfunc function_call<user@core::debug::Felt252PrintImpl::print> = function_call<user@core::debug::Felt252PrintImpl::print>;
+libfunc drop<Unit> = drop<Unit>;
+libfunc felt252_const<5> = felt252_const<5>;
+libfunc struct_construct<Unit> = struct_construct<Unit>;
+libfunc store_temp<Unit> = store_temp<Unit>;
+libfunc function_call<user@core::debug::print_felt252> = function_call<user@core::debug::print_felt252>;
+libfunc array_new<felt252> = array_new<felt252>;
+libfunc array_append<felt252> = array_append<felt252>;
+libfunc store_temp<Array<felt252>> = store_temp<Array<felt252>>;
+libfunc print = print;
+
+felt252_const<4>() -> ([0]); // 0
+store_temp<felt252>([0]) -> ([2]); // 1
+function_call<user@core::debug::Felt252PrintImpl::print>([2]) -> ([1]); // 2
+drop<Unit>([1]) -> (); // 3
+felt252_const<5>() -> ([3]); // 4
+store_temp<felt252>([3]) -> ([5]); // 5
+function_call<user@core::debug::Felt252PrintImpl::print>([5]) -> ([4]); // 6
+drop<Unit>([4]) -> (); // 7
+struct_construct<Unit>() -> ([6]); // 8
+store_temp<Unit>([6]) -> ([7]); // 9
+return([7]); // 10
+store_temp<felt252>([0]) -> ([2]); // 11
+function_call<user@core::debug::print_felt252>([2]) -> ([1]); // 12
+drop<Unit>([1]) -> (); // 13
+struct_construct<Unit>() -> ([3]); // 14
+store_temp<Unit>([3]) -> ([4]); // 15
+return([4]); // 16
+array_new<felt252>() -> ([1]); // 17
+array_append<felt252>([1], [0]) -> ([2]); // 18
+store_temp<Array<felt252>>([2]) -> ([2]); // 19
+print([2]) -> (); // 20
+struct_construct<Unit>() -> ([3]); // 21
+store_temp<Unit>([3]) -> ([4]); // 22
+return([4]); // 23
+
+var::main@0() -> (Unit);
+core::debug::Felt252PrintImpl::print@11([0]: felt252) -> (Unit);
+core::debug::print_felt252@17([0]: felt252) -> (Unit);

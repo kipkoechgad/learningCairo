@@ -1,0 +1,190 @@
+type Array<felt252> = Array<felt252> [storable: true, drop: true, dup: false, zero_sized: false];
+type Box<felt252> = Box<felt252> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<Box<felt252>> = Struct<ut@Tuple, Box<felt252>> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::Panic = Struct<ut@core::panics::Panic> [storable: true, drop: true, dup: true, zero_sized: true];
+type Tuple<core::panics::Panic, Array<felt252>> = Struct<ut@Tuple, core::panics::Panic, Array<felt252>> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)> = Enum<ut@core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>, Tuple<Box<felt252>>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Unit = Struct<ut@Tuple> [storable: true, drop: true, dup: true, zero_sized: true];
+type Tuple<Unit> = Struct<ut@Tuple, Unit> [storable: true, drop: true, dup: true, zero_sized: true];
+type core::panics::PanicResult::<((),)> = Enum<ut@core::panics::PanicResult::<((),)>, Tuple<Unit>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type felt252 = felt252 [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<felt252> = Struct<ut@Tuple, felt252> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::PanicResult::<(@core::felt252,)> = Enum<ut@core::panics::PanicResult::<(@core::felt252,)>, Tuple<felt252>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type RangeCheck = RangeCheck [storable: true, drop: false, dup: false, zero_sized: false];
+type u32 = u32 [storable: true, drop: true, dup: true, zero_sized: false];
+type Snapshot<Array<felt252>> = Snapshot<Array<felt252>> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::option::Option::<core::felt252> = Enum<ut@core::option::Option::<core::felt252>, felt252, Unit> [storable: true, drop: true, dup: true, zero_sized: false];
+
+libfunc array_new<felt252> = array_new<felt252>;
+libfunc felt252_const<30> = felt252_const<30>;
+libfunc store_temp<felt252> = store_temp<felt252>;
+libfunc array_append<felt252> = array_append<felt252>;
+libfunc felt252_const<20> = felt252_const<20>;
+libfunc felt252_const<4> = felt252_const<4>;
+libfunc store_temp<Array<felt252>> = store_temp<Array<felt252>>;
+libfunc array_pop_front<felt252> = array_pop_front<felt252>;
+libfunc branch_align = branch_align;
+libfunc unbox<felt252> = unbox<felt252>;
+libfunc enum_init<core::option::Option::<core::felt252>, 0> = enum_init<core::option::Option::<core::felt252>, 0>;
+libfunc store_temp<core::option::Option::<core::felt252>> = store_temp<core::option::Option::<core::felt252>>;
+libfunc jump = jump;
+libfunc struct_construct<Unit> = struct_construct<Unit>;
+libfunc enum_init<core::option::Option::<core::felt252>, 1> = enum_init<core::option::Option::<core::felt252>, 1>;
+libfunc enum_match<core::option::Option::<core::felt252>> = enum_match<core::option::Option::<core::felt252>>;
+libfunc function_call<user@core::debug::Felt252PrintImpl::print> = function_call<user@core::debug::Felt252PrintImpl::print>;
+libfunc drop<Unit> = drop<Unit>;
+libfunc snapshot_take<Array<felt252>> = snapshot_take<Array<felt252>>;
+libfunc drop<Array<felt252>> = drop<Array<felt252>>;
+libfunc u32_const<1> = u32_const<1>;
+libfunc store_temp<RangeCheck> = store_temp<RangeCheck>;
+libfunc store_temp<Snapshot<Array<felt252>>> = store_temp<Snapshot<Array<felt252>>>;
+libfunc store_temp<u32> = store_temp<u32>;
+libfunc function_call<user@core::array::ArrayImpl::<core::felt252>::at> = function_call<user@core::array::ArrayImpl::<core::felt252>::at>;
+libfunc enum_match<core::panics::PanicResult::<(@core::felt252,)>> = enum_match<core::panics::PanicResult::<(@core::felt252,)>>;
+libfunc struct_deconstruct<Tuple<felt252>> = struct_deconstruct<Tuple<felt252>>;
+libfunc rename<felt252> = rename<felt252>;
+libfunc struct_construct<Tuple<Unit>> = struct_construct<Tuple<Unit>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 0> = enum_init<core::panics::PanicResult::<((),)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<((),)>> = store_temp<core::panics::PanicResult::<((),)>>;
+libfunc enum_init<core::panics::PanicResult::<((),)>, 1> = enum_init<core::panics::PanicResult::<((),)>, 1>;
+libfunc felt252_const<29721761890975875353235833581453094220424382983267374> = felt252_const<29721761890975875353235833581453094220424382983267374>;
+libfunc struct_construct<core::panics::Panic> = struct_construct<core::panics::Panic>;
+libfunc struct_construct<Tuple<core::panics::Panic, Array<felt252>>> = struct_construct<Tuple<core::panics::Panic, Array<felt252>>>;
+libfunc function_call<user@core::debug::print_felt252> = function_call<user@core::debug::print_felt252>;
+libfunc store_temp<Unit> = store_temp<Unit>;
+libfunc function_call<user@core::array::array_at::<core::felt252>> = function_call<user@core::array::array_at::<core::felt252>>;
+libfunc enum_match<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>> = enum_match<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>>;
+libfunc struct_deconstruct<Tuple<Box<felt252>>> = struct_deconstruct<Tuple<Box<felt252>>>;
+libfunc struct_construct<Tuple<felt252>> = struct_construct<Tuple<felt252>>;
+libfunc enum_init<core::panics::PanicResult::<(@core::felt252,)>, 0> = enum_init<core::panics::PanicResult::<(@core::felt252,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(@core::felt252,)>> = store_temp<core::panics::PanicResult::<(@core::felt252,)>>;
+libfunc enum_init<core::panics::PanicResult::<(@core::felt252,)>, 1> = enum_init<core::panics::PanicResult::<(@core::felt252,)>, 1>;
+libfunc print = print;
+libfunc array_get<felt252> = array_get<felt252>;
+libfunc struct_construct<Tuple<Box<felt252>>> = struct_construct<Tuple<Box<felt252>>>;
+libfunc enum_init<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>, 0> = enum_init<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>> = store_temp<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>>;
+libfunc felt252_const<1637570914057682275393755530660268060279989363> = felt252_const<1637570914057682275393755530660268060279989363>;
+libfunc enum_init<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>, 1> = enum_init<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>, 1>;
+
+array_new<felt252>() -> ([1]); // 0
+felt252_const<30>() -> ([2]); // 1
+store_temp<felt252>([2]) -> ([2]); // 2
+array_append<felt252>([1], [2]) -> ([3]); // 3
+felt252_const<20>() -> ([4]); // 4
+store_temp<felt252>([4]) -> ([4]); // 5
+array_append<felt252>([3], [4]) -> ([5]); // 6
+felt252_const<4>() -> ([6]); // 7
+store_temp<felt252>([6]) -> ([6]); // 8
+array_append<felt252>([5], [6]) -> ([7]); // 9
+store_temp<Array<felt252>>([7]) -> ([7]); // 10
+array_pop_front<felt252>([7]) { fallthrough([8], [9]) 18([10]) }; // 11
+branch_align() -> (); // 12
+unbox<felt252>([9]) -> ([11]); // 13
+enum_init<core::option::Option::<core::felt252>, 0>([11]) -> ([12]); // 14
+store_temp<Array<felt252>>([8]) -> ([13]); // 15
+store_temp<core::option::Option::<core::felt252>>([12]) -> ([14]); // 16
+jump() { 23() }; // 17
+branch_align() -> (); // 18
+struct_construct<Unit>() -> ([15]); // 19
+enum_init<core::option::Option::<core::felt252>, 1>([15]) -> ([16]); // 20
+store_temp<Array<felt252>>([10]) -> ([13]); // 21
+store_temp<core::option::Option::<core::felt252>>([16]) -> ([14]); // 22
+enum_match<core::option::Option::<core::felt252>>([14]) { fallthrough([17]) 53([18]) }; // 23
+branch_align() -> (); // 24
+store_temp<felt252>([17]) -> ([20]); // 25
+function_call<user@core::debug::Felt252PrintImpl::print>([20]) -> ([19]); // 26
+drop<Unit>([19]) -> (); // 27
+snapshot_take<Array<felt252>>([13]) -> ([21], [22]); // 28
+drop<Array<felt252>>([21]) -> (); // 29
+u32_const<1>() -> ([23]); // 30
+store_temp<RangeCheck>([0]) -> ([26]); // 31
+store_temp<Snapshot<Array<felt252>>>([22]) -> ([27]); // 32
+store_temp<u32>([23]) -> ([28]); // 33
+function_call<user@core::array::ArrayImpl::<core::felt252>::at>([26], [27], [28]) -> ([24], [25]); // 34
+enum_match<core::panics::PanicResult::<(@core::felt252,)>>([25]) { fallthrough([29]) 48([30]) }; // 35
+branch_align() -> (); // 36
+struct_deconstruct<Tuple<felt252>>([29]) -> ([31]); // 37
+rename<felt252>([31]) -> ([32]); // 38
+store_temp<felt252>([32]) -> ([34]); // 39
+function_call<user@core::debug::Felt252PrintImpl::print>([34]) -> ([33]); // 40
+drop<Unit>([33]) -> (); // 41
+struct_construct<Unit>() -> ([35]); // 42
+struct_construct<Tuple<Unit>>([35]) -> ([36]); // 43
+enum_init<core::panics::PanicResult::<((),)>, 0>([36]) -> ([37]); // 44
+store_temp<RangeCheck>([24]) -> ([38]); // 45
+store_temp<core::panics::PanicResult::<((),)>>([37]) -> ([39]); // 46
+return([38], [39]); // 47
+branch_align() -> (); // 48
+enum_init<core::panics::PanicResult::<((),)>, 1>([30]) -> ([40]); // 49
+store_temp<RangeCheck>([24]) -> ([41]); // 50
+store_temp<core::panics::PanicResult::<((),)>>([40]) -> ([42]); // 51
+return([41], [42]); // 52
+branch_align() -> (); // 53
+drop<Unit>([18]) -> (); // 54
+drop<Array<felt252>>([13]) -> (); // 55
+array_new<felt252>() -> ([43]); // 56
+felt252_const<29721761890975875353235833581453094220424382983267374>() -> ([44]); // 57
+store_temp<felt252>([44]) -> ([44]); // 58
+array_append<felt252>([43], [44]) -> ([45]); // 59
+struct_construct<core::panics::Panic>() -> ([46]); // 60
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([46], [45]) -> ([47]); // 61
+enum_init<core::panics::PanicResult::<((),)>, 1>([47]) -> ([48]); // 62
+store_temp<RangeCheck>([0]) -> ([49]); // 63
+store_temp<core::panics::PanicResult::<((),)>>([48]) -> ([50]); // 64
+return([49], [50]); // 65
+store_temp<felt252>([0]) -> ([2]); // 66
+function_call<user@core::debug::print_felt252>([2]) -> ([1]); // 67
+drop<Unit>([1]) -> (); // 68
+struct_construct<Unit>() -> ([3]); // 69
+store_temp<Unit>([3]) -> ([4]); // 70
+return([4]); // 71
+store_temp<RangeCheck>([0]) -> ([5]); // 72
+store_temp<Snapshot<Array<felt252>>>([1]) -> ([6]); // 73
+store_temp<u32>([2]) -> ([7]); // 74
+function_call<user@core::array::array_at::<core::felt252>>([5], [6], [7]) -> ([3], [4]); // 75
+enum_match<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>>([4]) { fallthrough([8]) 85([9]) }; // 76
+branch_align() -> (); // 77
+struct_deconstruct<Tuple<Box<felt252>>>([8]) -> ([10]); // 78
+unbox<felt252>([10]) -> ([11]); // 79
+struct_construct<Tuple<felt252>>([11]) -> ([12]); // 80
+enum_init<core::panics::PanicResult::<(@core::felt252,)>, 0>([12]) -> ([13]); // 81
+store_temp<RangeCheck>([3]) -> ([14]); // 82
+store_temp<core::panics::PanicResult::<(@core::felt252,)>>([13]) -> ([15]); // 83
+return([14], [15]); // 84
+branch_align() -> (); // 85
+enum_init<core::panics::PanicResult::<(@core::felt252,)>, 1>([9]) -> ([16]); // 86
+store_temp<RangeCheck>([3]) -> ([17]); // 87
+store_temp<core::panics::PanicResult::<(@core::felt252,)>>([16]) -> ([18]); // 88
+return([17], [18]); // 89
+array_new<felt252>() -> ([1]); // 90
+array_append<felt252>([1], [0]) -> ([2]); // 91
+store_temp<Array<felt252>>([2]) -> ([2]); // 92
+print([2]) -> (); // 93
+struct_construct<Unit>() -> ([3]); // 94
+store_temp<Unit>([3]) -> ([4]); // 95
+return([4]); // 96
+array_get<felt252>([0], [1], [2]) { fallthrough([3], [4]) 104([5]) }; // 97
+branch_align() -> (); // 98
+struct_construct<Tuple<Box<felt252>>>([4]) -> ([6]); // 99
+enum_init<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>, 0>([6]) -> ([7]); // 100
+store_temp<RangeCheck>([3]) -> ([8]); // 101
+store_temp<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>>([7]) -> ([9]); // 102
+return([8], [9]); // 103
+branch_align() -> (); // 104
+array_new<felt252>() -> ([10]); // 105
+felt252_const<1637570914057682275393755530660268060279989363>() -> ([11]); // 106
+store_temp<felt252>([11]) -> ([11]); // 107
+array_append<felt252>([10], [11]) -> ([12]); // 108
+struct_construct<core::panics::Panic>() -> ([13]); // 109
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([13], [12]) -> ([14]); // 110
+enum_init<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>, 1>([14]) -> ([15]); // 111
+store_temp<RangeCheck>([5]) -> ([16]); // 112
+store_temp<core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>>([15]) -> ([17]); // 113
+return([16], [17]); // 114
+
+arry::main@0([0]: RangeCheck) -> (RangeCheck, core::panics::PanicResult::<((),)>);
+core::debug::Felt252PrintImpl::print@66([0]: felt252) -> (Unit);
+core::array::ArrayImpl::<core::felt252>::at@72([0]: RangeCheck, [1]: Snapshot<Array<felt252>>, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(@core::felt252,)>);
+core::debug::print_felt252@90([0]: felt252) -> (Unit);
+core::array::array_at::<core::felt252>@97([0]: RangeCheck, [1]: Snapshot<Array<felt252>>, [2]: u32) -> (RangeCheck, core::panics::PanicResult::<(core::box::Box::<@core::felt252>,)>);

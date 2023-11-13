@@ -1,0 +1,160 @@
+type felt252 = felt252 [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::Panic = Struct<ut@core::panics::Panic> [storable: true, drop: true, dup: true, zero_sized: true];
+type Array<felt252> = Array<felt252> [storable: true, drop: true, dup: false, zero_sized: false];
+type NonZero<felt252> = NonZero<felt252> [storable: true, drop: true, dup: true, zero_sized: false];
+type BuiltinCosts = BuiltinCosts [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<felt252, felt252, felt252, felt252> = Struct<ut@Tuple, felt252, felt252, felt252, felt252> [storable: true, drop: true, dup: true, zero_sized: false];
+type Tuple<core::panics::Panic, Array<felt252>> = Struct<ut@Tuple, core::panics::Panic, Array<felt252>> [storable: true, drop: true, dup: false, zero_sized: false];
+type core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)> = Enum<ut@core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, Tuple<felt252, felt252, felt252, felt252>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type Tuple<felt252> = Struct<ut@Tuple, felt252> [storable: true, drop: true, dup: true, zero_sized: false];
+type core::panics::PanicResult::<(core::felt252,)> = Enum<ut@core::panics::PanicResult::<(core::felt252,)>, Tuple<felt252>, Tuple<core::panics::Panic, Array<felt252>>> [storable: true, drop: true, dup: false, zero_sized: false];
+type GasBuiltin = GasBuiltin [storable: true, drop: false, dup: false, zero_sized: false];
+type RangeCheck = RangeCheck [storable: true, drop: false, dup: false, zero_sized: false];
+
+libfunc disable_ap_tracking = disable_ap_tracking;
+libfunc felt252_const<16> = felt252_const<16>;
+libfunc store_temp<RangeCheck> = store_temp<RangeCheck>;
+libfunc store_temp<GasBuiltin> = store_temp<GasBuiltin>;
+libfunc store_temp<felt252> = store_temp<felt252>;
+libfunc function_call<user@snap::fib> = function_call<user@snap::fib>;
+libfunc enum_match<core::panics::PanicResult::<(core::felt252,)>> = enum_match<core::panics::PanicResult::<(core::felt252,)>>;
+libfunc branch_align = branch_align;
+libfunc struct_deconstruct<Tuple<felt252>> = struct_deconstruct<Tuple<felt252>>;
+libfunc struct_construct<Tuple<felt252>> = struct_construct<Tuple<felt252>>;
+libfunc enum_init<core::panics::PanicResult::<(core::felt252,)>, 0> = enum_init<core::panics::PanicResult::<(core::felt252,)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::felt252,)>> = store_temp<core::panics::PanicResult::<(core::felt252,)>>;
+libfunc enum_init<core::panics::PanicResult::<(core::felt252,)>, 1> = enum_init<core::panics::PanicResult::<(core::felt252,)>, 1>;
+libfunc felt252_const<0> = felt252_const<0>;
+libfunc felt252_const<1> = felt252_const<1>;
+libfunc function_call<user@snap::fib[expr24]> = function_call<user@snap::fib[expr24]>;
+libfunc enum_match<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>> = enum_match<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>;
+libfunc struct_deconstruct<Tuple<felt252, felt252, felt252, felt252>> = struct_deconstruct<Tuple<felt252, felt252, felt252, felt252>>;
+libfunc drop<felt252> = drop<felt252>;
+libfunc get_builtin_costs = get_builtin_costs;
+libfunc store_temp<BuiltinCosts> = store_temp<BuiltinCosts>;
+libfunc withdraw_gas_all = withdraw_gas_all;
+libfunc dup<felt252> = dup<felt252>;
+libfunc felt252_is_zero = felt252_is_zero;
+libfunc struct_construct<Tuple<felt252, felt252, felt252, felt252>> = struct_construct<Tuple<felt252, felt252, felt252, felt252>>;
+libfunc enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 0> = enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 0>;
+libfunc store_temp<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>> = store_temp<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>;
+libfunc drop<NonZero<felt252>> = drop<NonZero<felt252>>;
+libfunc felt252_sub = felt252_sub;
+libfunc felt252_add = felt252_add;
+libfunc enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 1> = enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 1>;
+libfunc array_new<felt252> = array_new<felt252>;
+libfunc felt252_const<375233589013918064796019> = felt252_const<375233589013918064796019>;
+libfunc array_append<felt252> = array_append<felt252>;
+libfunc struct_construct<core::panics::Panic> = struct_construct<core::panics::Panic>;
+libfunc struct_construct<Tuple<core::panics::Panic, Array<felt252>>> = struct_construct<Tuple<core::panics::Panic, Array<felt252>>>;
+
+disable_ap_tracking() -> (); // 0
+felt252_const<16>() -> ([2]); // 1
+store_temp<RangeCheck>([0]) -> ([6]); // 2
+store_temp<GasBuiltin>([1]) -> ([7]); // 3
+store_temp<felt252>([2]) -> ([8]); // 4
+function_call<user@snap::fib>([6], [7], [8]) -> ([3], [4], [5]); // 5
+enum_match<core::panics::PanicResult::<(core::felt252,)>>([5]) { fallthrough([9]) 15([10]) }; // 6
+branch_align() -> (); // 7
+struct_deconstruct<Tuple<felt252>>([9]) -> ([11]); // 8
+struct_construct<Tuple<felt252>>([11]) -> ([12]); // 9
+enum_init<core::panics::PanicResult::<(core::felt252,)>, 0>([12]) -> ([13]); // 10
+store_temp<RangeCheck>([3]) -> ([14]); // 11
+store_temp<GasBuiltin>([4]) -> ([15]); // 12
+store_temp<core::panics::PanicResult::<(core::felt252,)>>([13]) -> ([16]); // 13
+return([14], [15], [16]); // 14
+branch_align() -> (); // 15
+enum_init<core::panics::PanicResult::<(core::felt252,)>, 1>([10]) -> ([17]); // 16
+store_temp<RangeCheck>([3]) -> ([18]); // 17
+store_temp<GasBuiltin>([4]) -> ([19]); // 18
+store_temp<core::panics::PanicResult::<(core::felt252,)>>([17]) -> ([20]); // 19
+return([18], [19], [20]); // 20
+disable_ap_tracking() -> (); // 21
+felt252_const<0>() -> ([3]); // 22
+felt252_const<1>() -> ([4]); // 23
+store_temp<RangeCheck>([0]) -> ([8]); // 24
+store_temp<GasBuiltin>([1]) -> ([9]); // 25
+store_temp<felt252>([2]) -> ([10]); // 26
+store_temp<felt252>([3]) -> ([11]); // 27
+store_temp<felt252>([4]) -> ([12]); // 28
+function_call<user@snap::fib[expr24]>([8], [9], [10], [11], [12]) -> ([5], [6], [7]); // 29
+enum_match<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>([7]) { fallthrough([13]) 42([14]) }; // 30
+branch_align() -> (); // 31
+struct_deconstruct<Tuple<felt252, felt252, felt252, felt252>>([13]) -> ([15], [16], [17], [18]); // 32
+drop<felt252>([15]) -> (); // 33
+drop<felt252>([16]) -> (); // 34
+drop<felt252>([17]) -> (); // 35
+struct_construct<Tuple<felt252>>([18]) -> ([19]); // 36
+enum_init<core::panics::PanicResult::<(core::felt252,)>, 0>([19]) -> ([20]); // 37
+store_temp<RangeCheck>([5]) -> ([21]); // 38
+store_temp<GasBuiltin>([6]) -> ([22]); // 39
+store_temp<core::panics::PanicResult::<(core::felt252,)>>([20]) -> ([23]); // 40
+return([21], [22], [23]); // 41
+branch_align() -> (); // 42
+enum_init<core::panics::PanicResult::<(core::felt252,)>, 1>([14]) -> ([24]); // 43
+store_temp<RangeCheck>([5]) -> ([25]); // 44
+store_temp<GasBuiltin>([6]) -> ([26]); // 45
+store_temp<core::panics::PanicResult::<(core::felt252,)>>([24]) -> ([27]); // 46
+return([25], [26], [27]); // 47
+disable_ap_tracking() -> (); // 48
+get_builtin_costs() -> ([5]); // 49
+store_temp<BuiltinCosts>([5]) -> ([5]); // 50
+withdraw_gas_all([0], [1], [5]) { fallthrough([6], [7]) 91([8], [9]) }; // 51
+branch_align() -> (); // 52
+dup<felt252>([2]) -> ([2], [10]); // 53
+store_temp<RangeCheck>([6]) -> ([6]); // 54
+felt252_is_zero([10]) { fallthrough() 64([11]) }; // 55
+branch_align() -> (); // 56
+dup<felt252>([3]) -> ([3], [12]); // 57
+struct_construct<Tuple<felt252, felt252, felt252, felt252>>([2], [4], [12], [3]) -> ([13]); // 58
+enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 0>([13]) -> ([14]); // 59
+store_temp<RangeCheck>([6]) -> ([15]); // 60
+store_temp<GasBuiltin>([7]) -> ([16]); // 61
+store_temp<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>([14]) -> ([17]); // 62
+return([15], [16], [17]); // 63
+branch_align() -> (); // 64
+drop<NonZero<felt252>>([11]) -> (); // 65
+felt252_const<1>() -> ([18]); // 66
+felt252_sub([2], [18]) -> ([19]); // 67
+dup<felt252>([4]) -> ([4], [21]); // 68
+felt252_add([3], [21]) -> ([20]); // 69
+store_temp<RangeCheck>([6]) -> ([25]); // 70
+store_temp<GasBuiltin>([7]) -> ([26]); // 71
+store_temp<felt252>([19]) -> ([27]); // 72
+store_temp<felt252>([4]) -> ([28]); // 73
+store_temp<felt252>([20]) -> ([29]); // 74
+function_call<user@snap::fib[expr24]>([25], [26], [27], [28], [29]) -> ([22], [23], [24]); // 75
+enum_match<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>([24]) { fallthrough([30]) 85([31]) }; // 76
+branch_align() -> (); // 77
+struct_deconstruct<Tuple<felt252, felt252, felt252, felt252>>([30]) -> ([32], [33], [34], [35]); // 78
+struct_construct<Tuple<felt252, felt252, felt252, felt252>>([32], [33], [34], [35]) -> ([36]); // 79
+enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 0>([36]) -> ([37]); // 80
+store_temp<RangeCheck>([22]) -> ([38]); // 81
+store_temp<GasBuiltin>([23]) -> ([39]); // 82
+store_temp<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>([37]) -> ([40]); // 83
+return([38], [39], [40]); // 84
+branch_align() -> (); // 85
+enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 1>([31]) -> ([41]); // 86
+store_temp<RangeCheck>([22]) -> ([42]); // 87
+store_temp<GasBuiltin>([23]) -> ([43]); // 88
+store_temp<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>([41]) -> ([44]); // 89
+return([42], [43], [44]); // 90
+branch_align() -> (); // 91
+drop<felt252>([2]) -> (); // 92
+drop<felt252>([4]) -> (); // 93
+drop<felt252>([3]) -> (); // 94
+array_new<felt252>() -> ([45]); // 95
+felt252_const<375233589013918064796019>() -> ([46]); // 96
+store_temp<felt252>([46]) -> ([46]); // 97
+array_append<felt252>([45], [46]) -> ([47]); // 98
+struct_construct<core::panics::Panic>() -> ([48]); // 99
+struct_construct<Tuple<core::panics::Panic, Array<felt252>>>([48], [47]) -> ([49]); // 100
+enum_init<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>, 1>([49]) -> ([50]); // 101
+store_temp<RangeCheck>([8]) -> ([51]); // 102
+store_temp<GasBuiltin>([9]) -> ([52]); // 103
+store_temp<core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>>([50]) -> ([53]); // 104
+return([51], [52], [53]); // 105
+
+snap::main@0([0]: RangeCheck, [1]: GasBuiltin) -> (RangeCheck, GasBuiltin, core::panics::PanicResult::<(core::felt252,)>);
+snap::fib@21([0]: RangeCheck, [1]: GasBuiltin, [2]: felt252) -> (RangeCheck, GasBuiltin, core::panics::PanicResult::<(core::felt252,)>);
+snap::fib[expr24]@48([0]: RangeCheck, [1]: GasBuiltin, [2]: felt252, [3]: felt252, [4]: felt252) -> (RangeCheck, GasBuiltin, core::panics::PanicResult::<(core::felt252, core::felt252, core::felt252, core::felt252)>);
